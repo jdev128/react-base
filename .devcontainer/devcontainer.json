@@ -2,8 +2,8 @@
     // Name this configuration
     "name": "Codespace for React",
     // Use the base codespace image
-    "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:latest",
-    "remoteUser": "codespace",
+    "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+    "remoteUser": "node",
     "overrideCommand": false,
     // Add the IDs of extensions you want installed when the container is created.
     "customizations": {
@@ -11,9 +11,11 @@
         "extensions": [
             "esbenp.prettier-vscode",
             "dbaeumer.vscode-eslint",
+            "streetsidesoftware.code-spell-checker-spanish",
             "dsznajder.es7-react-js-snippets",
-            "github.copilot"
+            "GitHub.copilot"
         ]
       }
-    }
+    },
+    "postCreateCommand": "npm install"
   }
